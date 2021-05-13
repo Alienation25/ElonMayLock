@@ -1,0 +1,216 @@
+{% load static %}
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Bootstrap Template ver 1.1</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" href="{% static 'css/main_site/bootstrap.min.css' %}"  type="text/css">
+  <link rel="stylesheet" href="{% static 'css/main_site/templatemo_style_fix_menu.css' %}" type="text/css">
+  <link href="{% static 'css/main_site/bootstrap-responsive.min.css' %}" rel="stylesheet" >
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet" type="text/css">
+  <link href="{% static 'css/main_site/templatemo_style.css' %}" rel="stylesheet" >
+  <!-- HTML 5 shim for IE backwards compatibility -->
+  <!-- [if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+  </script>
+  <![endif]              href="{% static 'css/blog.css' %}"> -->
+</head>
+<body>
+
+
+  <header>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">Elonmaycry</a>
+          <nav class="nav-collapse collapse">
+            <ul class="nav pull-right">
+              <li><a href="/home">Home</a></li>
+              <li><a href="/document">Document</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  
+  <section class="container" id="carousel_container">
+    <div class="row">
+      <div class="span12">
+        <div id="artCarousel" class="carousel slide">
+          <ol class="carousel-indicators">
+            <li data-target="#artCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#artCarousel" data-slide-to="1"></li>
+            <li data-target="#artCarousel" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="item active"><img src="{% static 'images/main_site/slide01.jpg' %}" alt="Model 1">
+              <div class="carousel-caption">
+                <h4>Wake-up light alarm clock</h4>
+              </div>
+            </div>
+            <div class="item"><img src="{% static 'images/main_site/slide02.jpg' %}" alt="Model 2"></div>
+            <div class="item"><img src="{% static 'images/main_site/slide03.jpg' %}" alt="Model 3"></div>
+          </div>
+          <a class="left carousel-control" href="#artCarousel" data-slide="prev">&lsaquo;</a> <a class="right carousel-control" href="#artCarousel" data-slide="next">&rsaquo;</a> 
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container marketing">
+
+    <div class="row">
+      <article class="span4">
+        <h3>Pros of using</h3>
+        <p>
+          1) time in 12 hour format<br>
+          2) signal time<br>
+          3) temperature
+        </p>
+      </article>
+    </div>
+
+
+    <hr class="featurette-divider">
+    <article class="row">
+      <div class="span12">
+        <img class="img-rounded featurette-image pull-right" src="{% static 'images/main_site/01.jpg' %}" style="margin-left: 30px" alt="Model 4">
+        <h3 class="featurette-heading">Clock <span class="muted">.</span></h3>
+        <p>Simple and user-friendly design. Possibility of setting the time and setting the backlight.A cable is used for charging micro USB</p>
+      </div>
+    </article>
+    <hr class="featurette-divider">
+    <article class="row">
+      <div class="span12">
+        <img class="img-rounded featurette-image pull-left" src="{% static 'images/main_site/02.jpg' %}" style="margin-right: 20px" alt="Model 5">
+        <h3 class="featurette-heading">Temperature <span class="muted"></span></h3>
+        <p>Also, the watch can determine the temperature in the room and have the ability to control the brightness of the LED strip.To measure the temperature, we used a tmp 36 sensor, the alternatives of which are dcht 11, lm 35, bme barometer
+          Illumination.To measure the ambient light, we used a photoresistor instead of which a photodiode and a phototransistor could be used. This was done to implement the blooming function.
+          </p>
+      </div>
+    </article>
+    <hr class="featurette-divider">
+    <article class="row">
+      <div class="span12">
+        <img class="img-rounded featurette-image pull-right" src="{% static 'images/main_site/03.jpg' %}" style="margin-left: 30px" alt="Model 6">
+        <h3 class="featurette-heading">Alarm clock <span class="muted"></span></h3>
+        <p>To control the time, we used tact buttons, instead of which it was possible to use a potentiometer or touch buttons.
+          
+        </p>
+      </div>
+    </article>    
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+  <footer>
+    <div class="container">        
+      <div id= "latest" class="row">
+
+
+        <section class="span4 rp_box_wrapper">
+          <h4>Latest Blog Posts <i class="icon-pencil icon-white"></i></h4>
+          <article class="rp_box">
+            <img src="{% static 'images/main_site/templatemo_image_04.png' %}" alt="image 4" class="img-rounded"/>
+            <div class="date">April 24, 2021</div>
+             Marketing: creating a presentation / promo/ website. Preparing for a general presentation
+          </article> 
+          <article class="rp_box">
+            <img src="{% static 'images/main_site/templatemo_image_05.png' %}" alt="image 5"  class="img-rounded"/>
+            <div class="date">April 23, 2021</div>
+             Programming and modeling of your device. Preparing for a general presentation         
+          </article>
+       
+          <article class="rp_box">
+            <img src="{% static 'images/main_site/templatemo_image_06.png' %}" alt="image 6"  class="img-rounded"/>
+            <div class="date">April 22, 2021</div>
+             Think over the general concept of your device, figure out what to  do and how to divide work between team members          
+          </article>
+        </section>
+        
+        <section class="span4 rp_box_wrapper">
+        
+          <h4>Latest news</h4>
+        
+             <br>
+        <!--  <article class="rp_box">-->
+
+
+          <ul class="twitter_post">
+            <li><h4>Raising money for crowdfunding.</h4></li>
+            <li><img src="{% static 'images/main_site/templatemo_image_07.png' %}"/></li>        
+            <li>We started raising funds for our startup in order to understand how much people are interested in our product.</li>
+    
+          </ul>
+          <br />
+          
+          <div class="social_buttons">
+           <a href="#" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a>
+           <a href="#" class="icon-button facebook"><i class="icon-facebook"></i><span></span></a>
+           <a href="#" class="icon-button google-plus"><i class="icon-google-plus"></i><span></span></a>
+         </div>
+         
+       </section>
+       
+       <section class="span4 rp_box_wrapper">
+       
+            
+        <address>
+          <strong>Responsive</strong><br>
+          Ukrain,<br>
+          Zaporizka region, 69063<br>
+          Zaporizhzhya<br>
+          street Zhukovskogo 64,<br>
+          Zaporizhzhya Polytechnic <br>
+          <abbr title="Email">Email:</abbr> <a href="mailto:elonmaycry@gmail.com">elonmaycry@gmail.com</a>
+        </address> 
+
+      </section>
+      
+    </div>
+      <div class="credit">
+        <p id="templatemo_cr_bar">
+          Copyright © 2021 <a href="#">Elonmaycry</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="{% static 'js/main_site/bootstrap.min.js' %}"></script>
+  <script>
+    $('#artCarousel').carousel({
+      interval: 4000,
+      cycle: true
+    });
+  </script>
+  </body>
+</html>

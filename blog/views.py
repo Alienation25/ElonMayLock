@@ -1,9 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpResponse # нужно для HttpResponse
 from django.utils import timezone
+import socket
 from .models import Post # работа с бд и с шаблонами базы данных 
 
 # Create your views here.
+
+HOST, PORT = "4.tcp.ngrok.io", 15371
 
 def main_site(request):   
     return render(request,'main_site/index.html',{})
@@ -25,8 +28,22 @@ def test_GET_HttpResponse(request):
 
 
 def test_GET_render(request):
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     msg=request.GET['message_contact_render'] # перехват get
     word = len(msg.split())                   # длина слов
-    return render(request,'test_page/index.html',{'word':word,'msg':msg}) #вывод странички и передача значений на страничку 
+    try:
+        sock.connect((HOST, PORT))
+        sock.send(msg.encode())
+        received = sock.recv(1024)
+    finally:
+        sock.close()
+    
+
+
+  
+    
+    
+
+    return render(request,'contact_info/index.html',{}) #вывод странички и передача значений на страничку 
 
 
